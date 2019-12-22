@@ -1,0 +1,11 @@
+epp - easy python packaging
+I wrote it mostly because I got tired of creating
+a git repo, a .gitignore file, a setup.py file and all that shit
+every time.
+And that should explain what this code does..
+
+installation:
+`pip install .`
+then
+`epp --help`
+to see your options
