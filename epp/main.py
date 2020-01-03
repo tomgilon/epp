@@ -120,7 +120,8 @@ def add_requirements(args):
 
 def main():
 	parser = argparse.ArgumentParser()
-	subparsers = parser.add_subparsers()
+	subparsers = parser.add_subparsers(dest='command')
+	subparsers.required = True
 
 	new = subparsers.add_parser('new', help='Initialize a new project in the current directory')
 	new.set_defaults(func=new_project)
