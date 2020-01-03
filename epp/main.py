@@ -127,10 +127,10 @@ def main():
 	new.set_defaults(func=new_project)
 	new.add_argument('--no-venv', dest='create_venv', default=True, action='store_false', help='Do not create a virtual environemnt for the project')
 
-	go = subparsers.add_parser('go', help='Open a shell in the project\'s virtual environment')
+	go = subparsers.add_parser('go', help='Open a shell in the project\'s virtual environment(the project within the current directory)')
 	go.set_defaults(func=activate_env)
 
-	requ = subparsers.add_parser('requ', help='Update the package\'s requirements in the setup.py script')
+	requ = subparsers.add_parser('requ', help='Update the package\'s requirements in the setup.py script(based on the packages which are currently installed)')
 	requ.set_defaults(func=add_requirements)
 
 	args = parser.parse_args()
